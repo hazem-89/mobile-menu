@@ -22,7 +22,7 @@ header{
     top: 0;
     right: 0;
     height: 4rem;
-    padding: 0.5rem;
+    padding: 0;
     display: flex;
     flex-direction: column;
 }
@@ -47,6 +47,7 @@ h1{
 .flex-container2{
     display: flex;
     align-items: center;
+    height: var(--header-height);
 }
 
 .bar1, .bar2, .bar3{
@@ -73,6 +74,9 @@ h1{
     align-items: center;
     color: #FAFAFA;
     font-size: 1.3rem;
+    position: relative;
+    cursor: pointer;
+    margin-right: 1rem;
 }
 .flex-column-container{
     display: flex;
@@ -87,13 +91,38 @@ h1{
     flex-direction: column;
     align-items: center;
     font-size: 1.3rem;
-    margin-top: 2rem;
     text-decoration: none;
+    left: 0;
+    margin: 0;
 }
 .menu-item{
     list-style: none;
-    margin-top: 1rem;
     text-transform: uppercase;
     text-align: center;
+    padding-top: 2em;
 
+}
+.menu-items{
+    visibility: hidden;
+    background-color: #1C1C1C;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+
+.active header{
+    height: 100vh;
+}
+.active .menu-items{
+    visibility: visible;
+}
+
+.icon-zoom-in{
+    position: absolute;
+    right: -0.5rem;
+    bottom: -0.1rem;
+    text-shadow: 0 0 0.2rem #1C1C1C;
+}
+.icon-font{
+    font-size: 1.5rem;
 }
